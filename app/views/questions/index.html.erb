@@ -1,0 +1,57 @@
+<h1>Would You Rather?</h1>
+
+<%= link_to "New Question", new_question_path, id: "new_link", remote: true  %>
+
+
+<div class="row">
+
+  <div class="col-sm-8">
+    <div class="questions">
+      <% if @questions.any? %>
+        <% @questions.each do |question| %>
+
+          <%= link_to question.topic, root_path %>
+
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="answer">
+                answer
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="votes">
+                votes
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="answer">
+                answer
+              </div>
+            </div>
+          </div>
+
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+<div class="col-sm-4">
+  <div class="comments">
+
+    <div class="row">
+      comment input
+    </div>
+    <div class="row">
+      first comment
+    </div>
+  </div>
+</div>
