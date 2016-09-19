@@ -5,44 +5,46 @@
 
 <div class="row">
 
-  <div class="col-sm-8">
-    <div class="questions">
-      <% if @questions.any? %>
-        <% @questions.each do |question| %>
+  <% if @questions.any? %>
+    <% @questions.each do |question| %>
+      <div class="col-sm-8">
+        <div class="questions">
 
           <%= link_to question.topic, root_path %>
 
-          <div class="row">
-            <div class="col-sm-4">
-              <div class="answer">
-                answer
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="answer">
+                  answer
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="votes">
+                  votes
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="answer">
+                  answer
+                </div>
               </div>
             </div>
-            <div class="col-sm-3">
-              <div class="votes">
-                votes
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="answer">
-                answer
-              </div>
-            </div>
+
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="row">
+          <div class="comment_form">
+            comment form
+
           </div>
 
-        <% end %>
-      <% end %>
-    </div>
-  </div>
-
-<div class="col-sm-4">
-  <div class="comments">
-
-    <div class="row">
-
-    </div>
-    <div class="row">
-      first comment
-    </div>
-  </div>
+        </div>
+        <div class="row">
+          <%= render "New Comment", new_question_comment_path(question) %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
 </div>
