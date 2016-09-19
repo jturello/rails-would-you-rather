@@ -1,6 +1,6 @@
-<%= render 'layouts/errors', :object => @comment %>
+
 <div id="new_comment_form">
-<% form_for[@question, @comment] do |f| %>
+<% form_for [question_url, comment.new] do |f| %>
   <div class="form-group">
     <%= f.label :author %>
     <%= f.text_field :author %>
