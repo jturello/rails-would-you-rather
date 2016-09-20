@@ -1,4 +1,6 @@
-<h1>Question Details</h1>
+<% content_for(:title, "Question Details") %>
+
+<h2>Question: <span class="blue"><%= @question.text %></span></h2>
 
 <p><%= link_to "Add 2 Answers", new_question_answer_path(@question) %></p>
 
