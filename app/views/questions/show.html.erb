@@ -1,6 +1,6 @@
 <h1>Question Details</h1>
 
-<p><%= link_to "Add Answer", new_question_answer_path(@question) %></p>
+<p><%= link_to "Add 2 Answers", new_question_answer_path(@question) %></p>
 
 <h3>Answers:</h3>
   <% if @question.answers.any? %>
@@ -24,7 +24,7 @@
       <ol>
         <% @question.comments.order(:text => :ASC).each do |comment| %>
           <li>
-            <%= comment.text %> : <%= comment.author %>
+            <%= comment.author %> : <%= comment.text %>
           </li>
         <% end %>
       </ol>
