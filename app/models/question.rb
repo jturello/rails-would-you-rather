@@ -3,6 +3,6 @@ class Question < ActiveRecord::Base
   has_many :comments
   validates_associated :answers
   validates_associated :comments
-  validates :topic, :presence => true
+  validates :text, :presence => true
   validates :author, :presence => true
 end

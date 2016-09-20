@@ -1,0 +1,33 @@
+<h1>Question Details</h1>
+
+<p><%= link_to "Add Answer", new_question_answer_path(@question) %></p>
+
+<h3>Answers:</h3>
+  <% if @question.answers.any? %>
+    <ol>
+      <% @question.answers.order(:text => :ASC).each do |answer| %>
+        <li>
+          <%= answer.text %>
+        </li>
+      <% end %>
+    </ol>
+  <% else %>
+    <p>No answers added yet!</p>
+  <% end %>
+
+  <hr>
+
+  <p><%= link_to "Add Comment", new_question_comment_path(@question) %></p>
+
+  <h3>Comments:</h3>
+    <% if @question.comments.any? %>
+      <ol>
+        <% @question.comments.order(:text => :ASC).each do |comment| %>
+          <li>
+            <%= comment.text %> : <%= comment.author %>
+          </li>
+        <% end %>
+      </ol>
+    <% else %>
+      <p>No comments added yet!</p>
+    <% end %>
