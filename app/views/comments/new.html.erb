@@ -1,6 +1,6 @@
 
 <% content_for(:title, "New comment") %>
 
-<h1>New comment for <%= comment.question.topic %></h1>
+<h3>New comment for <span class='blue'><%= @question.text %></span> </h3>
 
-<%= render('form') %>
+<%= render "form" %>
