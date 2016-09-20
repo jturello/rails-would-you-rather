@@ -16,6 +16,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.blue {
+  color: #337ab7;
+}
+
+.green {
+  color: #0C8641;
+  }
+
+.comment_hdr_question {
+}
+
 // *******  DEBUG STYLES  ********
 * { outline: 2px dotted red }
 * * { outline: 2px dotted green }
