@@ -19,11 +19,15 @@
 
   <hr>
 
-  <p><%= link_to "Add Comment", new_question_comment_path(@question) %></p>
+  <p><%= link_to "Add Comment", new_question_comment_path(@question), :id => "new_comment_link", :remote => true %></p>
+
+<div id="new_comment_errs">
+
+</div>
 
   <h3>Comments:</h3>
     <% if @question.comments.any? %>
-      <ol>
+      <ol id="question_comment_list">
         <% @question.comments.order(:text => :ASC).each do |comment| %>
           <li>
             <%= comment.author %> : <%= comment.text %>

@@ -1,0 +1,5 @@
+$('#new_comment_form').remove();
+$('#new_comment_link').show();
+<% if !@comment.errors.any? %>
+  $('#question_comment_list').append('<li> <%= @comment.author %> : <%= @comment.text %></li>');
+<% end %>
